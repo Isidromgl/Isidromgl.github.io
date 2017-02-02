@@ -46,3 +46,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+#cv{
+	background: linear-gradient(#FFFFFF,#263238);
+}
+.cabecera{
+	text-align: center;
+	font-family: 'Sanchez', serif;
+	background-image: url("imagenes/Serenity.jpg");
+	background-repeat: repeat-x;
+
+}

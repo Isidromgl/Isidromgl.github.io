@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Curriculum Vitae</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="estilo_cv.css">
+<!--<link rel="stylesheet" href="estilo_cv.css">-->
 <link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Sanchez" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="reset.css">
@@ -31,7 +31,7 @@
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <!-- Modificar esta lista con las secciones de tu curriculum -->
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="#navbar">Home</a></li>
         <li><a href="#Experiencia">Experiencia</a></li>
         <li><a href="#Estudios">Estudios</a></li>
         <li><a href="#Habilidades">Habilidades</a></li>
@@ -43,62 +43,119 @@
 
 <div class="container">
   <div class="cabecera">
-      <img alt="foto" src="imagenes/foto.png" style="border:0;width:200px;height:200px">
-      <h1>Isidro M. García López</h1>
-      <h2>Desarrollador GIS (en formación)/Hidrogeólogo/Geólogo</h2>
+      <img alt="foto" src="imagenes/foto.png" style="border:0;width:200px;height:190px">
+      <br>
+      <h1 id="nombre">Isidro M. García López</h1>
+      <h2 id="titulo">Desarrollador GIS (en formación)/Hidrogeólogo/Geólogo</h2><hr>
   </div>
-<hr>
-  <div>
 
+  <div id="envoltura">
 
-    <div id="formacion">
-      <h3 style="color: #CFD8DC">Formación academica</h3>
-      <h4>Curso Desarrollo Web Java EE</h4>
-      Talentum Empleo. Fundación Telefónica.
-      <h4> Máster en Recursos Hídricos y Medio Ambiente</h4>
-      Universidad de Málaga
-      <h4>Licenciatura en Geología.</h4>
-      Universidad de Granada.
-      (Colegiado por el Ilustre Colegio Oficial de Geólogos nº6986)
-    </div>
-  </div>
     <!--Cuerpo del CV-->
-    <div id="envoltura">
-      <div id="experiencia">
-        <h3>Experiencia Laboral</h3>
-        <h4> Zara Home España S.A. Marzo 2014-Febrero 2016</h4>
-        <b>Jefe de tienda; Responsable y Dependiente.</b>
-        Encargado del funcionamiento del establecimiento, gestión de un equipo de 15
-        personas, planificación de tareas y objetivos, estudio de ventas, gestión de
-        existencias, mercancías, procedimientos, rendimiento y nuevas iniciativas,
-        promociones especiales, trámite de las quejas y comentarios de clientes.
-        <h4>Fernando de la Fuente Consultores, S.L. Noviembre 2013-Febrero 2104</h4>
-        <b>Responsable Geólogo en proyectos de exploración y geoquímica de suelos.</b>
-        Proyecto “Córdoba”. Elaboración y realización de campaña de geoquímica de
-        arroyos, procesamiento de datos geoquímicos y cartografía.
-        Proyecto "Crato-Assumar-Portalegre" (Portugal) para Wresources. Elaboración y
-        realización de campaña de geoquímica de suelos, procesamiento de datos
-        geoquímicos y cartografía.
-        <h4>Universidad de Málaga e Instituto Geológico Y Minero Español. Mayo 2012-Septiembre 2012</h4>
-        <b>Colaboración en el primer hito del proyecto de investigación</b>, “Desarrollo para una
-        metodología para la protección de las regiones kársticas en relación con las
-        infraestructuras y otras actividades antrópicas” (G-GI3000/IDIM)
-        Proyecto Fin de Máster, realizado dentro del Área de Procesos Activos y Calidad
-        Ambiental, “Interacción y protección del karst en relación con las infraestructuras”.
-        Estudio y análisis de casos históricos y validez de un método de protección
-        utilizando Sistemas de Información Geográfica como solución para la disminución
-        de los problemas derivados de la construcción de infraestructuras.
-        <h4>Fernando de la Fuente Consultores, S.L. Julio 2011-Noviembre 2011</h4>
-        <b>Geólogo en proyectos de exploración y geoquímica de suelos.</b>
-        Proyecto "Andiñuela Gold Project" para Auropean Ventures inc. Campaña de
-        geoquímica de suelos: muestreo, cuarteo, molienda, procesamiento de datos
-        geoquímicos y cartografía.
-        Proyecto "Fiñana”. Campaña de geoquímica de suelos: muestreo, cuarteo,
-        molienda, procesamiento de datos geoquímicos y cartografía
+    <div id="Experiencia">
+      <h3>Experiencia Laboral</h3>
+      <table>
+        <tr>
+          <td><b>Quental</b></td>
+          <td> Noviembre 2016</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <b>Prácticas de desarrollador Web.</b><br><br>
+            Desarrollo Back-end de una aplicación web en lenguaje Java. Equipo de 10
+            personas, programando una app para empresas logistica basandonos en la gamifición del trabajo.
+            Sprint, JSF,JPA,MySql.
+          </td>
+        </tr>
+        <tr>
+          <td><b>Zara Home España S.A.</b></td>
+          <td> Marzo 2014-Febrero 2016</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <b>Jefe de tienda; Responsable y Dependiente.</b><br><br>
+            Encargado del funcionamiento del establecimiento, gestión de un equipo de 15
+            personas, planificación de tareas y objetivos, estudio de ventas, gestión de
+            existencias, mercancías, procedimientos, rendimiento y nuevas iniciativas,
+            promociones especiales, trámite de las quejas y comentarios de clientes.
+          </td>
+        </tr>
+        <tr>
+          <td><b>Fernando de la Fuente Consultores, S.L.</b></td>
+          <td> Noviembre 2013-Febrero 2104</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <b>Responsable Geólogo en proyectos de exploración y geoquímica de suelos.</b><br><br>
+            Proyecto “Córdoba”. Elaboración y realización de campaña de geoquímica de
+            arroyos, procesamiento de datos geoquímicos y cartografía.
+            Proyecto "Crato-Assumar-Portalegre" (Portugal) para Wresources. Elaboración y
+            realización de campaña de geoquímica de suelos, procesamiento de datos
+            geoquímicos y cartografía.
+          </td>
+        </tr>
+        <tr>
+          <td><b>Universidad de Málaga e Instituto Geológico Y Minero Español. </b></td>
+          <td>Mayo 2012-Septiembre 2012</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <b>Colaboración en el primer hito del proyecto de investigación.</b><br><br>
+            Desarrollo de una metodología para la protección de las regiones kársticas en relación con las
+            infraestructuras y otras actividades antrópicas” (G-GI3000/IDIM)
+            Proyecto Fin de Máster, realizado dentro del Área de Procesos Activos y Calidad
+            Ambiental, “Interacción y protección del karst en relación con las infraestructuras”.
+            Estudio y análisis de casos históricos y validez de un método de protección
+            utilizando Sistemas de Información Geográfica como solución para la disminución
+            de los problemas derivados de la construcción de infraestructuras.
+          </td>
+        </tr>
+        <tr>
+          <td><b>Fernando de la Fuente Consultores S.L.  </b></td>
+          <td>Julio 2011-Noviembre 2011</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <b>Geólogo en proyectos de exploración y geoquímica de suelos.</b><br><br>
+            Proyecto "Andiñuela Gold Project" para Auropean Ventures inc. Campaña de
+            geoquímica de suelos: muestreo, cuarteo, molienda, procesamiento de datos
+            geoquímicos y cartografía.
+            Proyecto "Fiñana”. Campaña de geoquímica de suelos: muestreo, cuarteo,
+            molienda, procesamiento de datos geoquímicos y cartografía
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="Estudios">
+      <h3>Formación</h3>
+      <table>
+        <tr>
+          <th>Titulo</th>
+          <th> Entidad </th>
+        </tr>
+        <tr>
+          <td><b>Master GIS</b></td>
+          <td>Esri España</td>
+        </tr>
+        <tr>
+          <td><b>Curso Desarrollo Web Java EE</b></td>
+          <td>Talentum Empleo. Fundación Telefónica</td>
+        </tr>
+        <tr>
+          <td><b>Máster en Recursos Hídricos y Medio Ambiente</b></td>
+          <td>Universidad de Málaga</td>
+        </tr>
+        <tr>
+          <td><b>Licenciatura en Geología</b><br>
+            <p>(Colegiado por el Ilustre Colegio Oficial de Geólogos nº6986)</p></td>
+            <td>Universidad de Granada</td>
+          </tr>
+        </table>
       </div>
 
       <div id="complementaria">
-        <h3 style="color:#37474F">Formación Complementaria:</h3>
+        <h3>Formación Complementaria:</h3>
         <h4>Curso de legislación para proyectos geológicos y peritajes judiciales.
           [On-line]Febrero 2013-Mayo 2013</h4>
           Ilustre Colegio Oficial de Geólogos, Madrid.
@@ -113,23 +170,26 @@
             Universidad de Jaén, Linares.
           </div>
 
-          <div id="estacias">
-            <h3 style="color: #CFD8DC">Estancias en el Extranjero:</h3>
+          <div id="estancias">
+            <h3>Estancias en el Extranjero:</h3>
             <h4>Congreso PDAC, Toronto, Canadá [4 días] 2011</h4>
             Asistencia a diferentes charlas y exposiciones sobre minería y geología en general.
             <h4>Programa Erasmus, Freie Universität Berlín, Alemania [11 meses] 2007 - 2008.</h4>
             Cuarto curso de la licenciatura.
           </div>
-          <div>C/Palencia 21, Madrid <br/> 661008794<br/> isidromgl@gmail.com<br/>
+          <div id="contacto">
+
             <a href="https://www.linkedin.com/in/isidromgl/">
               <img style="border:0;width:40px;height:40px" src="imagenes/Linkedin_vmc2015.png" alt="Icono de Linkedin"/>
             </a>
             <a href="https://github.com/Isidromgl">
-              <img style="border:0;width:35px;height:35px" src="imagenes/Github.png" alt="Icono de Github"/>
+              <img style="border:0;width:35px;height:35px" src="imagenes/GitHub.png" alt="Icono de Github"/>
             </a>
             <a href="https://twitter.com/isidromgarlo">
               <img style="border:0;width:40px;height:40px" src="imagenes/Twitter.png" alt="Icono de Twitter"/>
             </a>
+            <img style="border:0;width:40px;height:40px" src="imagenes/telefono-inteligente.png" alt="Icono teléfono móvil">661008794
+            <a>isidromgl@gmail.com</a>
           </div>
 
         </div>

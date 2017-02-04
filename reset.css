@@ -4,14 +4,14 @@
 */
 
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ h5, h6,  blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+table, caption, tbody, tfoot, thead, tr,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
@@ -20,7 +20,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -40,19 +39,65 @@ blockquote, q {
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
-	content: none;
 }
 table {
-	border-collapse: collapse;
 	border-spacing: 0;
+	width: 100%;
 }
-#cv{
-	background: linear-gradient(#FFFFFF,#263238);
+th{
+	text-align: inherit;
+	text-decoration: underline;
 }
+td{
+	padding-right:5%;
+	padding-top: 1.5%;
+	box-sizing: content-box;
+}
+
+tr{
+
+}
+#envoltura{
+
+	color: #FFF;
+	font-family: 'Arimo', sans-serif;
+	padding:2%;
+
+}
+h1{
+	padding-top: 0%;
+}
+h3{
+	font-size: 160%;
+	text-decoration: none;
+}
+h4{
+	font-size: 100%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+
 .cabecera{
 	text-align: center;
-	font-family: 'Sanchez', serif;
+
 	background-image: url("imagenes/Serenity.jpg");
 	background-repeat: repeat-x;
 
+}
+#nombre,#titulo{
+	font-size: 200%;
+	vertical-align: baseline;
+	font-family: 'Sanchez', serif;
+	color: #003367;
+	padding:0%;
+}
+p{
+	font-size: 75%;
+	padding-top: 1%;
+}
+#Experiencia,#Estudios,#complementaria,#estancias{
+	background: #003367;
+	padding: 1%;
+	margin: 1.5%;
 }

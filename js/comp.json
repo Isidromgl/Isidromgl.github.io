@@ -1,0 +1,38 @@
+{"complementary":[
+  {
+    "company": "Ilustre Colegio Oficial de Geólogos",
+    "position": "Curso de legislación para proyectos geológicos y peritajes judiciales.",
+    "location": "On-line",
+    "time":"On-line",
+    "period": "Febrero 2013-Mayo 2013"
+  },
+  {
+    "company": "Ilustre Colegio Oficial de Geólogos",
+    "position": "Curso de especialista en geotermia somera aplicada a la edificación",
+    "location": "Madrid",
+    "time":"21 horas",
+    "period": "2012"
+  },
+  {
+    "company": "Universidad de Jaén",
+    "position": "Curso de Sondeos",
+    "location": "Linares,Jaén",
+    "time":"22 horas",
+    "period": "2010"
+  },
+  {
+    "company": "Universidad de Granada",
+    "position": "Curso de Arcgis: Aplicación a las geociencias y a la ing. civil",
+    "location": "Granada",
+    "time":"45 horas",
+    "period": "2009"
+  },
+  {
+    "company": "Universidad de Jaén",
+    "position": "Curso de Geotecnia Aplicada",
+    "location": "Linares,Jaén",
+    "time":"30 horas",
+    "period": "2007"
+  }
+
+]}

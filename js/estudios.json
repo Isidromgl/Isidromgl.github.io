@@ -1,0 +1,29 @@
+{
+    "name": "Isidro M. García López",
+    "education": [
+      {
+        "company": "Universidad de Granada",
+        "position": "Licenciatura en Geología",
+        "location": "Granada",
+        "period": "2003-2011"
+      },
+      {
+        "company": "Universidad de Málaga",
+        "position": "Master en Recursos Hídricos y Medio Ambiente",
+        "location": "Málaga",
+        "period": "2011-2012"
+      },
+      {
+        "company": "Telefónica",
+        "position": "Curso desarrollo web Java",
+        "location": "Madrid",
+        "period": "2016"
+      },
+      {
+        "company": "Esri",
+        "position": "Master GIS",
+        "location": "Madrid",
+        "period": "2016-2017"
+      }
+    ]
+}

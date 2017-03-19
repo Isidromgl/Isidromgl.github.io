@@ -1,368 +1,438 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Curriculum Vitae</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Arimo:400,700|Sanchez" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="reset.css">
-<link rel="shortcut icon" href="favicon.png" type="image/png" />
-</head>
-<body id="cv">
-  <!-- Menú superior -->
-<nav class="navbar navbar-inverse">
-  <div class="container">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Curriculum Vitae</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.19/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.19/esri/css/esri.css">
 
-    <div class="navbar-header">
-      <button  type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" >
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://js.arcgis.com/3.19/"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>var dojoConfig = { parseOnLoad: true };</script>
+    <script>
+    require([
+        "esri/arcgis/utils",
+        "esri/dijit/LayerList",
+        "dijit/layout/BorderContainer",
+        "dijit/layout/ContentPane",
+        "dojo/domReady!"
+    ], function(
+        arcgisUtils,
+        LayerList
+    ) {
+        //Create a map based on an ArcGIS Online web map id
+        arcgisUtils.createMap("4e20e8c6f6b54b0eb7a5fb2022474062", "map").then(function(response){
+            var myWidget = new LayerList({
+               map: response.map,
+            });
+            myWidget.startup();
+        });
 
-      <!-- Cambiar por tu nombre -->
-      <a class="navbar-brand" href="#">Curriculum</a>
-    </div>
+    });
+    </script>
 
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <!-- Modificar esta lista con las secciones de tu curriculum -->
-        <li class="active"><a href="#navbar">Home</a></li>
-        <li><a href="#Experiencia">Experiencia</a></li>
-        <li><a href="#Estudios">Estudios</a></li>
-        <li><a href="#Habilidades">Habilidades</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="container">
-  <div class="cabecera">
-      <img alt="foto" src="imagenes/foto.png" style="border:0;width:200px;height:190px">
-      <br>
-      <h1 id="nombre">Isidro M. García López</h1>
-      <h2 id="titulo">Desarrollador GIS (en formación)/Hidrogeólogo/Geólogo</h2><hr>
-  </div>
-
-  <div id="envoltura">
-
-    <!--Cuerpo del CV-->
-    <div id="Experiencia">
-      <h3>Experiencia Laboral</h3>
-      <table>
-        <tr>
-          <td><b>Quental</b></td>
-          <td> Noviembre 2016</td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <b>Prácticas de desarrollador Web.</b><br><br>
-            Desarrollo Back-end de una aplicación web en lenguaje Java. Equipo de 10
-            personas, programando una app para empresas logistica basandonos en la gamifición del trabajo.
-            Sprint, JSF,JPA,MySql.
-          </td>
-        </tr>
-        <tr>
-          <td><b>Zara Home España S.A.</b></td>
-          <td> Marzo 2014-Febrero 2016</td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <b>Jefe de tienda, Responsable y Dependiente.</b><br><br>
-            Encargado del funcionamiento del establecimiento, gestión de un equipo de 15
-            personas, planificación de tareas y objetivos, estudio de ventas, gestión de
-            existencias, mercancías, procedimientos, rendimiento y nuevas iniciativas,
-            promociones especiales, trámite de las quejas y comentarios de clientes.
-          </td>
-        </tr>
-        <tr>
-          <td><b>Fernando de la Fuente Consultores, S.L.</b></td>
-          <td> Noviembre 2013-Febrero 2104</td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <b>Responsable Geólogo en proyectos de exploración y geoquímica de suelos.</b><br><br>
-            Proyecto “Córdoba”. Elaboración y realización de campaña de geoquímica de
-            arroyos, procesamiento de datos geoquímicos y cartografía.
-            Proyecto "Crato-Assumar-Portalegre" (Portugal) para Wresources. Elaboración y
-            realización de campaña de geoquímica de suelos, procesamiento de datos
-            geoquímicos y cartografía.
-          </td>
-        </tr>
-        <tr>
-          <td><b>Universidad de Málaga e Instituto Geológico Y Minero Español. </b></td>
-          <td>Mayo 2012-Septiembre 2012</td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <b>Colaboración en el primer hito del proyecto de investigación.</b><br><br>
-            Desarrollo de una metodología para la protección de las regiones kársticas en relación con las
-            infraestructuras y otras actividades antrópicas” (G-GI3000/IDIM)
-            Proyecto Fin de Máster, realizado dentro del Área de Procesos Activos y Calidad
-            Ambiental, “Interacción y protección del karst en relación con las infraestructuras”.
-            Estudio y análisis de casos históricos y validez de un método de protección
-            utilizando Sistemas de Información Geográfica como solución para la disminución
-            de los problemas derivados de la construcción de infraestructuras.
-          </td>
-        </tr>
-        <tr>
-          <td><b>Fernando de la Fuente Consultores S.L.  </b></td>
-          <td>Julio 2011-Noviembre 2011</td>
-        </tr>
-        <tr>
-          <td colspan="2">
-            <b>Geólogo en proyectos de exploración y geoquímica de suelos.</b><br><br>
-            Proyecto "Andiñuela Gold Project" para Auropean Ventures inc. Campaña de
-            geoquímica de suelos: muestreo, cuarteo, molienda, procesamiento de datos
-            geoquímicos y cartografía.
-            Proyecto "Fiñana”. Campaña de geoquímica de suelos: muestreo, cuarteo,
-            molienda, procesamiento de datos geoquímicos y cartografía
-          </td>
-        </tr>
-      </table>
+  </head>
+  <body id="page-top">
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button  type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+           </button>
+          <a class="navbar-brand" href="#">Curriculum</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <!-- Secciones de tu curriculum -->
+            <li class="active"><a href="#navbar">Home</a></li>
+            <li><a href="#experience">Experiencia</a></li>
+            <li><a href="#studies">Estudios</a></li>
+            <li><a href="#complementary">Complementarios</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#stays">Estancias</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </div>
       </div>
-      <a href="#cv" class="flecha">
-        <img style="width:10px;height:10px" src="imagenes/up.png" alt="Flecha para subir al menú">
-      </a>
-    <hr>
-
-    <div id="Estudios">
-      <h3>Formación</h3>
-      <table>
-        <tr>
-          <th>Titulo</th>
-          <th> Entidad </th>
-        </tr>
-        <tr>
-          <td><b>Master GIS</b></td>
-          <td>Esri España</td>
-        </tr>
-        <tr>
-          <td><b>Curso Desarrollo Web Java EE</b></td>
-          <td>Talentum Empleo. Fundación Telefónica</td>
-        </tr>
-        <tr>
-          <td><b>Máster en Recursos Hídricos y Medio Ambiente</b></td>
-          <td>Universidad de Málaga</td>
-        </tr>
-        <tr>
-          <td><b>Licenciatura en Geología</b><br>
-            <p>(Colegiado por el Ilustre Colegio Oficial de Geólogos nº6986)</p></td>
-            <td>Universidad de Granada</td>
-          </tr>
-        </table>
-
+    </nav>
+    <div class="container">
+      <div class="top">
+          <img alt="foto" src="imagenes/foto.png" style="border:0;width:200px;height:190px">
+          <br>
+          <h1 id="name">Isidro M. García López</h1>
+          <h2 id="title">Desarrollador GIS (en formación)/Hidrogeólogo/Geólogo</h2><hr>
       </div>
-      <a href="#cv" class="flecha">
-        <img style="width:10px;height:10px" src="imagenes/up.png" alt="Flecha para subir al menú">
-      </a><hr>
-
-
-      <div id="complementaria">
-        <h3>Formación Complementaria:</h3>
-        <h4>Curso de legislación para proyectos geológicos y peritajes judiciales.
-          [On-line]Febrero 2013-Mayo 2013</h4>
-          Ilustre Colegio Oficial de Geólogos, Madrid.
-          <h4>Curso de especialista en geotermia somera aplicada a la edificación
-            [21 horas] 2012</h4>
+      <div id="envoltura">
+        <!--Body of CV-->
+        <div id="experience">
+          <h3>Experiencia Laboral</h3>
+          <table>
+            <tr>
+              <td><b>Quental</b></td>
+              <td> Noviembre 2016</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <b>Prácticas de desarrollador Web.</b><br><br>
+                Desarrollo Back-end de una aplicación web en lenguaje Java. Equipo de 10
+                personas, programando una app para empresas logistica basandonos en la gamifición del trabajo.
+                Sprint, JSF,JPA,MySql.
+              </td>
+            </tr>
+            <tr>
+              <td><b>Zara Home España S.A.</b></td>
+              <td> Marzo 2014-Febrero 2016</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <b>Jefe de tienda, Responsable y Dependiente.</b><br><br>
+                Encargado del funcionamiento del establecimiento, gestión de un equipo de 15
+                personas, planificación de tareas y objetivos, estudio de ventas, gestión de
+                existencias, mercancías, procedimientos, rendimiento y nuevas iniciativas,
+                promociones especiales, trámite de las quejas y comentarios de clientes.
+              </td>
+            </tr>
+            <tr>
+              <td><b>Fernando de la Fuente Consultores, S.L.</b></td>
+              <td> Noviembre 2013-Febrero 2104</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <b>Responsable Geólogo en proyectos de exploración y geoquímica de suelos.</b><br><br>
+                Proyecto “Córdoba”. Elaboración y realización de campaña de geoquímica de
+                arroyos, procesamiento de datos geoquímicos y cartografía.
+                Proyecto "Crato-Assumar-Portalegre" (Portugal) para Wresources. Elaboración y
+                realización de campaña de geoquímica de suelos, procesamiento de datos
+                geoquímicos y cartografía.
+              </td>
+            </tr>
+            <tr>
+              <td><b>Universidad de Málaga e Instituto Geológico Y Minero Español. </b></td>
+              <td>Mayo 2012-Septiembre 2012</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <b>Colaboración en el primer hito del proyecto de investigación.</b><br><br>
+                Desarrollo de una metodología para la protección de las regiones kársticas en relación con las
+                infraestructuras y otras actividades antrópicas” (G-GI3000/IDIM)
+                Proyecto Fin de Máster, realizado dentro del Área de Procesos Activos y Calidad
+                Ambiental, “Interacción y protección del karst en relación con las infraestructuras”.
+                Estudio y análisis de casos históricos y validez de un método de protección
+                utilizando Sistemas de Información Geográfica como solución para la disminución
+                de los problemas derivados de la construcción de infraestructuras.
+              </td>
+            </tr>
+            <tr>
+              <td><b>Fernando de la Fuente Consultores S.L.  </b></td>
+              <td>Julio 2011-Noviembre 2011</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <b>Geólogo en proyectos de exploración y geoquímica de suelos.</b><br><br>
+                Proyecto "Andiñuela Gold Project" para Auropean Ventures inc. Campaña de
+                geoquímica de suelos: muestreo, cuarteo, molienda, procesamiento de datos
+                geoquímicos y cartografía.
+                Proyecto "Fiñana”. Campaña de geoquímica de suelos: muestreo, cuarteo,
+                molienda, procesamiento de datos geoquímicos y cartografía
+              </td>
+            </tr>
+          </table>
+          <a href="#page-top" class="btn btn-circle page-scroll">
+                <i class="fa fa-angle-double-up animated"></i>
+          </a>
+        </div>
+        <hr>
+        <div id="studies">
+          <h3>Formación</h3>
+          <table class="table">
+            <tr>
+              <th>Entidad</th>
+              <th> Titulo </th>
+              <th> Localidad </th>
+              <th> Periodo </th>
+            </tr>
+          </table>
+          <a href="#page-top" class="btn btn-circle page-scroll">
+                <i class="fa fa-angle-double-up animated"></i>
+          </a>
+        </div>
+        <hr>
+        <div id="complementary">
+          <div>
+          <h3>Formación Complementaria:</h3>
+          <h4>Curso de legislación para proyectos geológicos y peritajes judiciales.
+            [On-line]Febrero 2013-Mayo 2013</h4>
             Ilustre Colegio Oficial de Geólogos, Madrid.
-            <h4>Curso de Sondeos [22 horas] 2010</h4>
-            Universidad de Jaén, Linares.
-            <h4>Curso de Arcgis: Aplicación a las geociencias y a la ing. civil [45 horas] 2009</h4>
-            UGR, Granada.
-            <h4>Curso de Geotecnia Aplicada [30 horas] 2007</h4>
-            Universidad de Jaén, Linares.
-      </div>
-      <a href="#cv" class="flecha">
-        <img style="width:10px;height:10px" src="imagenes/up.png" alt="Flecha para subir al menú">
-      </a><hr>
+            <h4>Curso de especialista en geotermia somera aplicada a la edificación
+              [21 horas] 2012</h4>
+              Ilustre Colegio Oficial de Geólogos, Madrid.
+              <h4>Curso de Sondeos [22 horas] 2010</h4>
+              Universidad de Jaén, Linares.
+              <h4>Curso de Arcgis: Aplicación a las geociencias y a la ing. civil [45 horas] 2009</h4>
+              UGR, Granada.
+              <h4>Curso de Geotecnia Aplicada [30 horas] 2007</h4>
+              Universidad de Jaén, Linares.
+            </div>
+              <a href="#page-top" class="btn btn-circle page-scroll">
+                    <i class="fa fa-angle-double-up animated"></i>
+              </a>
+        </div>
+        <hr>
+        <div id="skills" >
+          <h3>Habilidades:</h3>
+          <section class="container content-section text-center">
 
-      <div id="estancias">
-        <h3>Estancias en el Extranjero:</h3>
-        <h4>Congreso PDAC, Toronto, Canadá [4 días] 2011</h4>
-        Asistencia a diferentes charlas y exposiciones sobre minería y geología en general.
-        <h4>Programa Erasmus, Freie Universität Berlín, Alemania [11 meses] 2007 - 2008.</h4>
-        Cuarto curso de la licenciatura.
-      </div>
-      <a href="#cv" class="flecha">
-        <img style="width:10px;height:10px" src="imagenes/up.png" alt="Flecha para subir al menú">
-      </a><hr>
-      <div id="Habilidades">
-        <h3>Habilidades:</h3>
-          <h1>Java EE</h1>
-          <div class="progress">
-            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-            aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-            <span class="sr-only">20% Complete</span>
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                  <li data-target="#myCarousel" data-slide-to="3"></li>
+                  <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <h2>Java EE</h2>
+                      <div class="progress">
+                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
+                        aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        <span class="sr-only">20% Complete</span>
+                      </div>
+                    </div>
+                    <h2>Java SE</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                            <span class="sr-only">20% Complete</span>
+                        </div>
+                      </div>
+                    <h2>JavaScript</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="10"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                            <span class="sr-only">10% Complete</span>
+                        </div>
+                      </div>
+                    <h2>JQuery</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="10"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                            <span class="sr-only">10% Complete</span>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                    <h2>AngularJS</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="10"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                            <span class="sr-only">10% Complete</span>
+                        </div>
+                      </div>
+                    <h2>Python</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                            <span class="sr-only">50% Complete (warning)</span>
+                        </div>
+                      </div>
+                    <h2>CSS3</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                            <span class="sr-only">60% Complete (warning)</span>
+                        </div>
+                      </div>
+                    <h2>HTML5</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                            <span class="sr-only">60% Complete (warning)</span>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="item">
+                    <h2>JSF</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="30"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                            <span class="sr-only">30% Complete</span>
+                        </div>
+                      </div>
+
+                    <h2>Spring</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="10"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                            <span class="sr-only">10% Complete</span>
+                        </div>
+                      </div>
+                    <h2>Hibernate</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="10"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                            <span class="sr-only">10% Complete</span>
+                        </div>
+                      </div>
+                    <h2>JPA</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                            <span class="sr-only">20% Complete</span>
+                        </div>
+                      </div>
+                    </div>
+                  <div class="item">
+                    <h2>SQL</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                            <span class="sr-only">60% Complete (warning)</span>
+                        </div>
+                      </div>
+                    <h2>MySql</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                            <span class="sr-only">50% Complete (danger)</span>
+                        </div>
+                      </div>
+                    <h2>ArcGis</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                            <span class="sr-only">70% Complete (danger)</span>
+                        </div>
+                      </div>
+
+                  </div>
+                  <div class="item">
+                    <h2>Scrum</h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="30"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                            <span class="sr-only">80% Complete (danger)</span>
+                        </div>
+                      </div>
+                      <h2>Agile</h2>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40"
+                            aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                              <span class="sr-only">40% Complete (danger)</span>
+                          </div>
+                        </div>
+                    <h2>Github </h2>
+                      <div class="progress">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                          aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                            <span class="sr-only">60% Complete (danger)</span>
+                        </div>
+                      </div>
+
+                  </div>
+                </div>
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Sig.</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Ant.</span>
+                </a>
+              </div>
+
+
+            </section>
+          <a href="#page-top"  id="button1" class="btn btn-circle page-scroll">
+                <i class="fa fa-angle-double-up animated"></i>
+          </a>
+
           </div>
+        <hr>
+        <div id="stays">
+          <h3>Estancias en el Extranjero:</h3>
+          <div id="map" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"></div>
+          <a href="#page-top" class="btn btn-circle page-scroll">
+                <i class="fa fa-angle-double-up animated"></i>
+          </a>
         </div>
-      <h1>Java SE</h1>
-      <div class="progress">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
-        aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-        <span class="sr-only">20% Complete</span>
-      </div>
+        <hr>
+        <div id="download" >
+          <h3>Download</h3>
+          <div class="download-section content-section text-center">
+            <div class="col-lg-8 col-lg-offset-2">
+
+                <p>Descargate mi tarjeta de visita en tus dispositivos.</p>
+                <a href="downl/Isidromgarcilopez.vcf" class="btn btn-default btn-lg" download="VirtualCard">Vcard</a>
+                <a href="downl/BusnisseCard.jpg" class="btn btn-default btn-lg" download="VirtualCard">Tarjeta de visita</a>
+              </div>
+
+          </div>
+            <a href="#page-top" class="btn btn-circle page-scroll">
+              <i class="fa fa-angle-double-up animated"></i>
+          </a>
+          </div>
+        <hr>
+        <div id="contact">
+          <a href="https://www.linkedin.com/in/isidromgl/">
+            <img style="border:0;width:40px;height:40px" src="imagenes/Linkedin_vmc2015.png" alt="Icono de Linkedin"/>
+           </a>
+          <a href="https://github.com/Isidromgl">
+            <img style="border:0;width:35px;height:35px" src="imagenes/GitHub.png" alt="Icono de Github"/>
+           </a>
+          <a href="https://twitter.com/isidromgarlo">
+            <img style="border:0;width:40px;height:40px" src="imagenes/Twitter.png" alt="Icono de Twitter"/>
+           </a>
+          <a href="#De">
+            <img style="border:0;width:40px;height:40px" src="imagenes/mail.png" alt="Icono de email"/>
+           </a>
+          <img style="border:0;width:40px;height:40px" src="imagenes/telefono-inteligente.png" alt="Icono teléfono móvil">661008794<br><br>
+          <form name="form1" method="POST" action= "mailto:isidromgl@gmail.com" enctype="text/plain" class="content-section text-center">
+            <label for="De">Tu email:</label>
+            <input id="De" type="email">
+
+            <label for="asunto">Asunto: </label>
+            <input id="asunto" name="asunto" type="text"><br>
+
+            <label for="Mensaje">Mensaje:</label>
+            <textarea id="Mensaje" name="Mensaje"></textarea>
+
+            <button type="submit">Enviar</button>
+          </form>
+          <a href="#page-top" id="button2" class="btn btn-circle page-scroll">
+                <i class="fa fa-angle-double-up animated"></i>
+          </a>
+        </div>
+        <hr>
+     </div>
     </div>
-    <h1>JavaScript</h1>
-    <div class="progress">
-      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="10"
-      aria-valuemin="0" aria-valuemax="100" style="width: 10%">
-      <span class="sr-only">10% Complete</span>
-    </div>
-  </div>
-  <h1>JQuery</h1>
-  <div class="progress">
-    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="10"
-    aria-valuemin="0" aria-valuemax="100" style="width: 10%">
-    <span class="sr-only">10% Complete</span>
-  </div>
-</div>
-<h1>AngularJS</h1>
-<div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="10"
-  aria-valuemin="0" aria-valuemax="100" style="width: 10%">
-  <span class="sr-only">10% Complete</span>
-</div>
-</div>
-<h1>Python</h1>
-<div class="progress">
-  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50"
-  aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-  <span class="sr-only">50% Complete (warning)</span>
-</div>
-</div>
-<h1>CSS3</h1>
-<div class="progress">
-  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
-  aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-  <span class="sr-only">60% Complete (warning)</span>
-</div>
-</div>
-<h1>HTML5</h1>
-<div class="progress">
-  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60"
-  aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-  <span class="sr-only">60% Complete (warning)</span>
-</div>
-</div>
-
-
-<h1>JSF</h1>
-<div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="30"
-  aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-  <span class="sr-only">30% Complete</span>
-</div>
-</div>
-<h1>Spring</h1>
-<div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="10"
-  aria-valuemin="0" aria-valuemax="100" style="width: 10%">
-  <span class="sr-only">10% Complete</span>
-</div>
-</div>
-<h1>Hibernate</h1>
-<div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="10"
-  aria-valuemin="0" aria-valuemax="100" style="width: 10%">
-  <span class="sr-only">10% Complete</span>
-</div>
-</div>
-
-<h1>JPA</h1>
-<div class="progress">
-  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-  aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-  <span class="sr-only">20% Complete</span>
-</div>
-</div>
-<h1>SQL</h1>
-<div class="progress">
-  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
-  aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-  <span class="sr-only">60% Complete (warning)</span>
-</div>
-</div>
-<h1>MySql</h1>
-<div class="progress">
-  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50"
-  aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-  <span class="sr-only">50% Complete (danger)</span>
-</div>
-</div>
-<h1>ArcGis</h1>
-<div class="progress">
-  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70"
-  aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-  <span class="sr-only">70% Complete (danger)</span>
-</div>
-</div>
-<h1>Agile</h1>
-<div class="progress">
-  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40"
-  aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-  <span class="sr-only">40% Complete (danger)</span>
-</div>
-</div>
-<h1>Scrum</h1>
-<div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="30"
-  aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-  <span class="sr-only">80% Complete (danger)</span>
-</div>
-</div>
-<h1>Github </h1>
-<div class="progress">
-  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
-  aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-  <span class="sr-only">60% Complete (danger)</span>
-</div>
-</div>
-</div>
-
-
-      <a href="#cv" class="flecha">
-        <img style="width:10px;height:10px" src="imagenes/up.png" alt="Flecha para subir al menú">
+    <div class="content-section text-right">
+      <a href="https://validator.w3.org/check?uri=http%3A%2F%2Fhhkaos.github.io&amp;charset=%28detect+automatically%29&amp;doctype=Inline&amp;group=0" target="_blank">
+      <img style="border:0;width:88px;height:31px" src="imagenes/valhtml.png" alt="Valid HTML!">
+     </a>
+      <a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fhhkaos.github.io&amp;profile=css3&amp;usermedium=all&amp;warning=1&amp;vextwarning=&amp;lang=en" target="_blank">
+      <img style="border:0;width:88px;height:31px" src="imagenes/valcss.png" alt="Valid CSS!">
       </a>
-      <hr>
-      <div id="contacto">
-            <a href="https://www.linkedin.com/in/isidromgl/">
-              <img style="border:0;width:40px;height:40px" src="imagenes/Linkedin_vmc2015.png" alt="Icono de Linkedin"/>
-            </a>
-            <a href="https://github.com/Isidromgl">
-              <img style="border:0;width:35px;height:35px" src="imagenes/GitHub.png" alt="Icono de Github"/>
-            </a>
-            <a href="https://twitter.com/isidromgarlo">
-              <img style="border:0;width:40px;height:40px" src="imagenes/Twitter.png" alt="Icono de Twitter"/>
-            </a>
-            <a href="#De">
-              <img style="border:0;width:40px;height:40px" src="imagenes/mail.png" alt="Icono de email"/>
-            </a>
-            <img style="border:0;width:40px;height:40px" src="imagenes/telefono-inteligente.png" alt="Icono teléfono móvil">661008794<br><br>
-            <form action="Send.php" method="GET">
-              <label for="De">Tu email:</label>
-              <input id="De" type="email">
-
-              <label for="Asunto">Asunto: </label>
-              <input id="Asunto" name="Asunto" type="text"><br>
-
-              <label for="Mensaje">Mensaje:</label>
-              <textarea id="Mensaje" name="Mensaje"></textarea>
-
-              <button type="submit">Enviar</button>
-            </form>
-      </div>
-      <a href="#cv" class="flecha">
-        <img style="width:10px;height:10px" src="imagenes/up.png" alt="Flecha para subir al menú">
-      </a><hr>
-
-        </div>
-</div>
-  <!-- Añade aquí el contenido que hayas hecho hasta ahora de tu curriculum -->
-    </body>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>
